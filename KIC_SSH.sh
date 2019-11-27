@@ -13,9 +13,10 @@ LOCATE=$(dirname $(readlink -f $BASH_SOURCE))
     else xterm -e "cd $LOCATE && $ext $file"
     fi
 elif [ $OS == "Darwin" ]; then
+SOURCE=${BASH_SOURCE[0]}
     osascript -e 'tell application "Terminal"
         activate
-        do shell script "\"SOURCE="${BASH_SOURCE[0]}\""
+        do shell script "\"$SOURCE\""
     end tell'
 else echo "NOT SUPPORTED"
 fi
