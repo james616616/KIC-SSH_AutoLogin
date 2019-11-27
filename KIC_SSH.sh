@@ -2,7 +2,7 @@
 script=KIC_SSH
 ext=sh
 OS=$(uname)
-LOCATE=$(dirname $(readlink -f $BASH_SOURCE)) 
+LOCATE=$(dirname $(basename $BASH_SOURCE)) 
 file=$ext" "$script"-"$OS.$ext
 if [ $OS == "Linux" ]; then
     DE=$XDG_CURRENT_DESKTOP
