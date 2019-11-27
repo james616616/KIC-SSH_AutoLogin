@@ -83,7 +83,7 @@ case "$Input" in
       case "$ConfirmInput" in
         "q" | "yes"| "Yes" | "Y" | "y")
           VBoxManage controlvm $VMNAME acpipowerbutton;
-          echo "Waiting for $VMNAME_C to shutdown. Expecting $waitTime seconds";
+          echo -e "Waiting for $VMNAME_C to shutdown. Expecting $waitTime seconds";
           for (( i=0 ; i<$waitTime ; i++ )); do
             sleep 1; echo -ne ".";
           done;;
