@@ -97,4 +97,7 @@ esac
 main_menu;
 echo "\n~~~~~~~~~~~~~~~~~~~~ END ~~~~~~~~~~~~~~~~~~~~\n"
 sleep 1;
+osascript -e 'tell application "Terminal"
+  quit
+end tell'
 exit 1;
