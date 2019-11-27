@@ -15,7 +15,7 @@ if [ $OS == "Linux" ]; then
 elif [ $OS == "Darwin" ]; then
     osascript -e 'tell application "Terminal"
     activate
-        do script "\"$file\"" in window 1
+        do script \"$file\" in window 1
     end tell'
 else echo "NOT SUPPORTED"
 fi
