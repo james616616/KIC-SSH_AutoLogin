@@ -16,7 +16,7 @@ elif [ $OS == "Darwin" ]; then
     SOURCE="$(dirname $0)"
     osascript -e 'tell application "Terminal"
         activate
-        do script "cd '$SOURCE' && sh 'file'"
+        do script "cd '$SOURCE' && sh '$file'"
    end tell'
 else echo "NOT SUPPORTED"
 fi
